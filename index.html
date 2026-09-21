@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi Math Circle</title>
-  </head>
-  <body>
-    <h1>Welcome to Pi Math Circle</h1>
-    <p>Professor Thao Vuong teaches Competition Math, covering four core topics with tons of handouts and practice materials.</p>
-  </body>
+    <style>
+        body {
+            background-color: #0b132b;
+            color: #e0e6ed;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #1c2541;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #8d99ae;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+        .discord-btn {
+            display: inline-block;
+            background-color: #3a86ff;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            transition: background-color 0.2s;
+        }
+        .discord-btn:hover {
+            background-color: #2667cc;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #1c2541;
+            border: 1px solid #3a506b;
+            border-radius: 10px;
+            padding: 30px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #2b3a63;
+            border-color: #3a86ff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Replace 'logo.png' with your actual logo image file name or link if you upload it later -->
+    <img src="logo.png" alt="Pi Math Circle Logo" class="logo" onerror="this.style.display='none'">
+
+    <h1>Welcome to the PiMathCircle</h1>
+    <p>We are a warm welcoming community that is serious about competition math. Professor Thao gives out homework every week!</p>
+
+    <a href="https://discord.com/channels/1551229114932011078/1551231910880092180" class="discord-btn" target="_blank">Join the server!</a>
+
+    <div class="grid-container">
+        <div class="card">Combinatorics</div>
+        <div class="card">Algebra</div>
+        <div class="card">Geometry</div>
+        <div class="card">Number Theory</div>
+    </div>
+
+</body>
 </html>
