@@ -5,3 +5,39 @@ title: Homework and Recordings
 
 <h1>Homework and Recordings</h1>
 <p>Enter your passcode to unlock the homework and recordings.</p>
+
+<!-- Passcode Protection Box -->
+<div style="margin-top: 30px; background-color: #1c2541; padding: 30px; border-radius: 12px; border: 1px solid #3a506b; max-width: 500px;">
+    <input type="password" id="passcode-input" placeholder="Enter passcode..." style="padding: 12px; width: 60%; font-size: 1em; border-radius: 6px; border: 1px solid #3a506b; background-color: #0b132b; color: #ffffff; outline: none;">
+    <button onclick="checkPasscode()" style="padding: 12px 20px; font-size: 1em; font-weight: bold; background-color: #0096c7; color: white; border: none; border-radius: 6px; cursor: pointer; margin-left: 10px;">Unlock</button>
+    <p id="error-msg" style="color: #ff6b6b; font-size: 0.9em; margin-top: 10px; display: none;">Incorrect passcode. Please try again.</p>
+</div>
+
+<!-- Hidden Content (Revealed upon entering the correct passcode) -->
+<div id="protected-content" style="display: none; margin-top: 30px; background-color: #1c2541; padding: 30px; border-radius: 12px; border: 1px solid #0096c7;">
+    <h2 style="color: #ffffff; margin-top: 0;">Welcome, Students!</h2>
+    <p>Here are your weekly homework assignments and class recordings:</p>
+    <ul style="color: #a5b4fc; text-align: left; max-width: 400px; margin: 0 auto; line-height: 1.8;">
+        <li>Week 1 Homework & Recording — <em>Coming Soon</em></li>
+        <li>Week 2 Homework & Recording — <em>Coming Soon</em></li>
+    </ul>
+</div>
+
+<script>
+    function checkPasscode() {
+        // Change 'YOUR_SECRET_PIN' to whatever passcode you want to use!
+        const correctPin = "YOUR_SECRET_PIN"; 
+        const userInput = document.getElementById("passcode-input").value;
+        const protectedDiv = document.getElementById("protected-content");
+        const errorMsg = document.getElementById("error-msg");
+
+        if (userInput === correctPin) {
+            protectedDiv.style.display = "block";
+            errorMsg.style.display = "none";
+            document.getElementById("passcode-input").value = "";
+        } else {
+            errorMsg.style.display = "block";
+            protectedDiv.style.display = "none";
+        }
+    }
+</script>
