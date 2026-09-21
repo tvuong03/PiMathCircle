@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Pi Math Circle</title>
+  
+  <!-- Favicon: Adds the logo to your browser tab -->
+  <link rel="icon" type="image/png" href="{{ '/logo.png' | relative_url }}">
+
   <style>
     /* --- Dark Blue Theme --- */
     body {
@@ -134,7 +138,6 @@
 
   <header>
     <div class="nav-left">
-      <!-- Uses your uploaded logo -->
       <img src="{{ '/logo.png' | relative_url }}" alt="Pi Math Circle Logo" class="nav-logo">
       <a href="{{ '/' | relative_url }}" class="site-title">Pi Math Circle</a>
     </div>
