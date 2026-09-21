@@ -1,1 +1,166 @@
 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Pi Math Circle</title>
+  
+  <!-- Favicon: Adds the logo to your browser tab -->
+  <link rel="icon" type="image/png" href="{{ '/logo.png' | relative_url }}">
+
+  <style>
+    /* --- Dark Blue Theme --- */
+    body {
+      background-color: #0b132b;
+      color: #e0e6ed;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* --- Top Navigation Bar --- */
+    header {
+      background-color: #1c2541;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #3a506b;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-logo {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #3a506b;
+    }
+
+    .site-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* --- Buttons with Distinct Shades of Blue --- */
+    .btn {
+      padding: 9px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: opacity 0.2s, transform 0.1s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* 1. About Us - Deep Navy Blue */
+    .btn-about { background-color: #1d3557; color: #ffffff; }
+    
+    /* 2. Resources - Medium Blue */
+    .btn-resources { background-color: #1d6f8a; color: #ffffff; }
+    
+    /* 3. Homework - Bright Sky Blue */
+    .btn-homework { background-color: #0096c7; color: #ffffff; }
+    
+    /* 4. Discord Button - Discord Blurple */
+    .btn-discord { background-color: #5865F2; color: #ffffff; }
+    
+    .discord-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* --- Main Content Area --- */
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #a5b4fc;
+      font-size: 1.15em;
+      margin-bottom: 20px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      border-top: 1px solid #1c2541;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+      .nav-left, .nav-right {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-left">
+      <img src="{{ '/logo.png' | relative_url }}" alt="Pi Math Circle Logo" class="nav-logo">
+      <a href="{{ '/' | relative_url }}" class="site-title">Pi Math Circle</a>
+    </div>
+    <nav class="nav-right">
+      <a href="{{ '/about.html' | relative_url }}" class="btn btn-about">About Us</a>
+      <a href="{{ '/resources.html' | relative_url }}" class="btn btn-resources">Resources and Handouts</a>
+      <a href="{{ '/homework.html' | relative_url }}" class="btn btn-homework">Homework and Recordings</a>
+      
+      <a href="https://discord.com/channels/1551229114932011078/1551231910880092180" class="btn btn-discord" target="_blank">
+        <svg class="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        Join the Discord Server
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    &copy; 2026 Pi Math Circle. All rights reserved.
+  </footer>
+
+</body>
+</html>
